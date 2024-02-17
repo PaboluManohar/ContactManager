@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org" th:replace="~{base::Layout(~{::section})}">
+<head>
+	<meta charset="UTF-8" />
+	<title>This is home page</title>
+</head>
+<body>
+<section class="banner d-flex justify-content-center align-items-center">
+    <div class="text-center">
+        <h1 class="font-weight-bold" style="font-size: 3em;">Smart Contact Manager</h1>
+        <p>Secure web app using Spring Security for authentication.</p>
+        <p>User-friendly navigation for a seamless experience.</p>
+        <div class="mt-5"></div>
+        
+             <a th:href="@{/signin}"  class="btn my-primary btn-lg text-white">Get Started</a>
+        
+    </div>
+    
+</section>
+
+</body>
+</html>

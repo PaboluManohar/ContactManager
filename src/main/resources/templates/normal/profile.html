@@ -1,0 +1,208 @@
+
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org"
+	th:replace="~{normal/base::Layout(~{::section})}">
+<head>
+<meta charset="UTF-8" />
+<title>This is dash page</title>
+</head>
+<body>
+	<section>
+
+
+
+
+		<div class="card mr-3 ml-3" style="border-radius: 20px">
+			<div class="card-body">
+
+				<div class="text-center">
+					<div class="container-fluid mt-1">
+						<div class="row">
+<div class="col-md-12">
+
+
+<!-- //image -->
+
+	<div>
+									<img style="height: 200px; width: 200px; border-radius: 50%"
+										th:src="@{'/img/aa.jpg'}" alt="" />
+								</div>
+
+
+
+
+
+
+<h1 th:text="${user.name}"></h1>
+
+</div>
+							<div class="col-md-12">
+
+
+								
+								<table class="table mt-3">
+									<thead class="table-dark" style="background-color: #008491">
+										<tr>
+											<th scope="col"
+												style="border-top-left-radius: 20px; border-top: none;">USER_ID</th>
+		
+											<th scope="col"
+												style="border-top-right-radius: 20px; border-top: none" th:text="${user.id}"></th>
+										</tr>
+									</thead>
+									<tbody>
+
+
+										<tr>
+											<th scope="row">Email</th>
+											<td th:text="${user.email}"></td>
+										</tr>
+
+<tr>
+										<th scope="row">Role</th>
+											<td th:text="${user.role}"></td>
+										</tr>
+										
+										
+
+										
+										<tr>
+										<th scope="row">Account Active</th>
+											<td th:text="${user.enabled}"></td>
+										</tr>
+
+<tr>
+											<th scope="row">About you</th>
+											<td th:text="${user.about}"></td>
+										</tr>
+
+
+
+
+
+
+
+
+									</tbody>
+								</table>
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+<script >
+		
+		$(document).ready(()=>{
+			$('.item').removeClass('active');
+			$('#profile-link').addClass("active");
+		})
+		</script>
+
+
+
+
+
+
+
+
+
+
+	</section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="card mr-3 ml-3" style="border-radius: 20px">
+			<div class="card-body">
+
+				<div class="text-center">
+					<div class="container-fluid mt-1">
+						<div class="row">
+
+							<div class="col-md-12">
+
+
+								<h1>Your Details</h1>
+								<table class="table mt-3">
+									<thead class="table-dark" style="background-color: #008491">
+										<tr>
+											<th scope="col"
+												style="border-top-left-radius: 20px; border-top: none;">ID</th>
+																						<th scope="col">Name</th>
+
+											<th scope="col"
+												style="border-top-right-radius: 20px; border-top: none">Action</th>
+										</tr>
+									</thead>
+									<tbody>
+
+
+										<tr>
+											<th scope="row" th:text="'d'"></th>
+											<td th:text="'d'"></td>
+
+										</tr>
+
+									</tbody>
+								</table>
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->

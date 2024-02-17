@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org"
+	th:replace="~{base::Layout(~{::section})}">
+<head>
+<meta charset="UTF-8" />
+<title>forgot</title>
+</head>
+<body>
+	<section>
+		<div id="login">
+			<div class="container">
+				<div id="login-row"
+					class="row justify-content-center align-items-center">
+					<div id="login-column" class="col-md-6">
+						<div id="login-box" style="height: 290px" class="col-md-12">
+
+<!-- 							<div th:if="${msg}" th:classappend="${msg.type}"
+								th:text="${msg.content}" class="m-4 text-center alert"></div> -->
+							<div th:if="${msg}" th:classappend="${msg.type}" class="m-4 text-center alert">
+								
+								<div th:if="${msg.content != 'register'}">
+									<div th:text="${msg.content}" class="container ">
+										
+									</div>
+								</div>
+								<div th:if="${msg.content == 'register'}">
+									<div class="container  ">
+									Not Registered &nbsp;	<a class="h5 " style="text-decoration: none; " th:href="@{/signup}">   Click Here to Register</a>
+									</div>
+								</div>
+							</div>
+
+							<div class="text-center m-4">
+								<h2>Your registered email</h2>
+							</div>
+							<form method="post" action="" th:action="@{/sendOtp}">
+
+								<div class="form-group">
+
+									<input type="email" name="email" placeholder="enter email here"
+										class="form-control" />
+								</div>
+								<div class="text-center container">
+									<button class="btn btn-primary">Send Otp</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<!-- 
+		<div class="card mr-3 ml-3 my-3" style="border-radius: 20px">
+			<div class="card-body">
+
+				<div class="text-center">
+					<div class="container-fluid mt-1">
+						<div class="row">
+							<div class="col-md-12">
+							
+							
+							<h1> this is email form </h1>
+							
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+ -->
+
+
+
+
+
+
+
+
+	</section>
+</body>
+</html>

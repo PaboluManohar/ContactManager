@@ -1,0 +1,149 @@
+
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org"
+	th:replace="~{normal/base::Layout(~{::section})}">
+<head>
+<meta charset="UTF-8" />
+<title>This is dash page</title>
+</head>
+<body>
+	<section>
+		<div  class="card mr-3 ml-3" style="border-radius: 20px">
+			<div class="card-body">
+
+				<div class="text-center">
+					<div class="container-fluid mt-1">
+						<div th:if="${contact}" class="row">
+						
+						
+						<div class="text-left container h2 "> <a style="color: gray" th:href="@{/user/show_Contacts/0}"> <i class="fa-solid fa-circle-chevron-left"></i></a></div>
+						
+
+							<div class="col-md-10 offset-md-1">
+
+
+								<div>
+									<img style="height: 200px; width: 200px; border-radius: 50%"
+										th:src="@{'/img/'+${contact.imageUrl}}" alt="ok" />
+								</div>
+								<h1 class="mt-3 ">
+									<div th:text="${contact.name}+' '+${contact.secondName}"></div>
+								</h1>
+
+
+
+
+
+
+								<table class="table">
+									<thead>
+										<tr>
+											<th scope="col">#ID</th>
+											<th scope="col"><span th:text="${contact.cId}"></span></th>
+
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<th scope="row">Email</th>
+											<td><span th:text="${contact.email}"></span></td>
+
+										</tr>
+
+										<tr>
+											<th scope="row">Phone</th>
+											<td><span th:text="${contact.phone}"></span></td>
+
+										</tr>
+										<tr>
+											<th scope="row">Work</th>
+											<td><span th:text="${contact.work}"></span></td>
+
+										</tr>
+
+									</tbody>
+
+
+
+
+								</table>
+
+								<div class="TableDowndescription mt-3">
+									<th:block th:utext="${contact.description}"></th:block>
+
+
+								</div>
+
+
+								<div class="container text-center">
+
+									
+									
+									<div class="row">
+									
+									<div class="col-2 offset-md-3">
+									
+									<div class="col-3 offset-md-2"> <a  th:onclick="|funD(event, ${contact.cId})|"
+												th:href="@{'/user/delete/'+${contact.cId}}"
+												style="font-size: 100%" class="btn btn-sm"> <i style="font-size: 230%;color: red"
+													class="fa-solid fa-trash-can" > <h5 style="font-family: cursive;">delete</h5></i>
+											</a> </div>
+											
+											
+											
+									<!-- <button style="font-size: 230%;color: red" class="btn  btn-sm">
+										<i class="fa-solid fa-trash-can"> <span style="font-size: 50%">Delete</span></i>
+									</button> -->
+									
+									</div>
+																		<div class="col-2 offset-md-2">
+																													<div class="col-3 offset-md-1">												
+	
+ <form style="margin: none; padding: none;"  method="post" th:action="@{/user/updateForm/{cId}(cId=${contact.cId})}">
+    <button type="submit" class="btn" >
+        <i style="font-size: 230%;color: blue" class="fa-solid fa-pen-to-square" ><h5 style="font-family: sans-serif">update</h5></i>
+    </button>
+</form></div>
+									
+	<!-- 									<div class="col-3 offset-md-1">																								<form method="post" action="@{'/user/updateForm/'+${c.cId}}">
+  
+ <form style="margin: none; padding: none;"  method="post" th:action="@{/user/updateForm/{cId}(cId=${contact.cId})}">
+    <button type="submit" class="btn" >
+        <i style="font-size: 230%;color: blue" class="fa-solid fa-pen-to-square" ><span ><h5 style="font-family: sans-serif;">update</h5></span></i>
+    </button>
+</form></div> -->
+									<!-- <button style="font-size: 230%;color: blue"  class="btn  btn-sm">
+										<i class="fa-solid fa-pen-to-square"> <span style="font-size: 50%">Update</span></i>
+									</button> -->
+										</div>
+									</div>
+									
+								</div>
+
+
+
+
+
+
+
+
+
+
+
+							</div>
+						</div>
+						<div th:unless="${contact}"><div class="m-3 p-3"  style=" color: red;background: #ffcccb;"> <h1> you don't have permission to see</h1></div>
+						<div class="card text-center mt-3 p-3" style="border: none">
+						<div class="row text-center"><div class="col-12" ><i style="font-size: 1000%;color: #003334" class="fa-solid fa-eye-slash"></i></div></div></div>
+				</div>
+							</div>
+				</div>
+			</div>
+		</div>
+
+	</section>
+</body>
+</html>
+
+
+

@@ -1,0 +1,135 @@
+<!-- 
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org" th:replace="~{normal/base::Layout(~{::section})}">
+<head>
+	<meta charset="UTF-8" />
+	<title>This is dash page</title>
+</head>
+<body>
+	<section>
+		<h1>you are normal user</h1>
+	<h2>this is private user</h2>
+	<h2><div th:text="${user.name}"></div>
+	<div th:text="${user.email}"></div></h2>
+	
+	<div><a th:href="@{/logout}">Logout</a></div>
+	
+	
+	</section>
+</body>
+</html> -->
+
+
+
+
+
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org"
+	th:replace="~{normal/base::Layout(~{::section})}">
+<head>
+<meta charset="UTF-8" />
+<title>index</title>
+</head>
+<body>
+	<section>
+
+		<div class="card mr-3 ml-3 my-3" style="border-radius: 20px">
+			<div class="card-body">
+
+				<div class="text-center">
+					<div class="container-fluid mt-1">
+						<div class="row">
+							<div class="col-md-12">
+
+								<div>
+									<!-- <img style="height: 200px; width: 200px; border-radius: 50%"
+										th:src="@{'/img/aa.jpg'}" alt="" />
+		 -->						</div>
+
+
+
+							</div>
+							
+							<div class="col-md-12">
+							
+							<h1 class="text-center mt-3 text-secondary font-italic ">Start storing your contacts....</h1>
+							
+							</div>
+							
+							<div class="col-md-8 text-center offset-md-2 mt-3">
+							<a th:href="@{/user/add-contact}" class="btn mt-4 btn-primary  font-italic font-weight-heavy ">Add New Contact</a>
+							</div>
+							
+							<div class="col-md-10 offset-md-1">
+							
+							<div class="container mt-5">
+    <div class="row">
+        <!-- Welcome Message -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img th:src="'/img/welcome.jpg'" class="rounded-top-right card-img-top" alt="Welcome Image">
+                <div class="card-body">
+                    <h2 class="card-title">Welcome to Contact Manager!</h2>
+                    <p class="card-text">Embark on a journey of Java programming excellence with us. Whether you're a seasoned developer or just starting, discover a wealth of resources, tutorials, and projects to elevate your skills.</p>
+                    <p class="card-text">Explore our latest articles, dive into coding challenges, and connect with a community passionate about technology. We're thrilled to have you on board!</p>
+                    <p class="card-text">If you ever need assistance or have suggestions, feel free to reach out. Happy coding!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Help and Support -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img th:src="'/img/support.jpg'" class="rounded-top-right card-img-top" alt="Help and Support Image">
+                <div class="card-body">
+                    <h3 class="card-title">Need Help or Support?</h3>
+                    <p class="card-text">Explore our comprehensive <a href="#">Help & Support</a> section for detailed documentation, FAQs, and troubleshooting guides. Whether you're facing a coding challenge or need assistance navigating our platform, we've got you covered.</p>
+                    <p class="card-text">For personalized support, don't hesitate to contact us at <a href="mailto:support@scm.com">support@scm.com</a>. Our team is here to ensure you have a seamless experience.</p>
+                    <p class="card-text">Thank you for choosing Our services. Your success is our priority!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Section -->
+        <div class="col-md-4">
+            <div class="card h-100">
+                <img th:src="'/img/feedback.jpg'" class="rounded-top-right card-img-top" alt="Feedback Image">
+                <div class="card-body">
+                    <h3 class="card-title">We Value Your Feedback!</h3>
+                    <p class="card-text">Have thoughts, suggestions, or ideas to share? We'd love to hear from you. Your feedback helps us enhance your experience and make [Your Website Name] even better.</p>
+                    <p class="card-text">Use the form below to submit your feedback. Whether it's a feature request, a bug report, or just a general comment, your input is invaluable to us. Thank you for being a part of our community!</p>
+                    <form action="#" method="post">
+                        <!-- Include form fields for feedback -->
+                        <textarea class="form-control" name="feedback" placeholder="Your feedback..." required></textarea>
+                        <button type="submit" class="btn btn-primary mt-3">Submit Feedback</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+							
+							
+							
+							
+							
+							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+		<script >
+		
+		$(document).ready(()=>{
+			$('.item').removeClass('active');
+			$('#home-link').addClass("active");
+		})
+		</script>
+
+	</section>
+</body>
+</html>

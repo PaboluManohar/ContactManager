@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org"
+	th:replace="~{base::Layout(~{::section})}">
+<head>
+<meta charset="UTF-8" />
+<title>This is about page</title>
+</head>
+<body>
+	<section>
+		  <div id="login">
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" style="height: 290px" class="col-md-12">
+
+<div th:if="${msg == null}" class=" text-center alert alert-success m-4 " role="alert">
+we have sent opt to your email valid only for 30 seconds 
+</div>      
+<div th:if="${msg}" th:text="${msg.content}" class="text-center alert alert-danger m-4"></div>               
+
+                  <div class="container">
+                     <form method="post" action="" th:action="@{/verify_otp}">
+                     
+                     <div class="form-group">
+                     <input type="hidden" name="otp" th:value="${otp}" />
+                     <input type="hidden" name="email" th:value="${email}" />
+                     
+                     <input type="text" name="enteredOtp" placeholder="enter otp here" class="form-control" />
+                     </div>
+                     <div class="text-center container">
+                     <button class="btn btn-primary">Verify Otp</button>
+                     </div>
+                     </form></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+	</section>
+</body>
+</html>

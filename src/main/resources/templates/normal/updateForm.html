@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org" th:replace="~{normal/base::Layout(~{::section})}">
+<head>
+	<meta charset="UTF-8" />
+	<title>This is dash page</title>
+</head>
+<body>
+	<section>
+	
+<!-- 	<div class="card mr-3 ml-3" style="border-radius: 20px">
+    <div class="card-body">
+
+        <div class="text-center">
+            <div class="container-fluid mt-1">
+         
+            </div>
+        </div>
+    </div>
+</div>
+	 -->
+
+	
+			<div class="card mr-3 ml-3" style="border-radius: 20px">
+			<div class="card-body">
+
+				<div class="text-center">
+					<div class="container-fluid mt-1">
+						<div class="row">
+
+							<div class="col-md-10 offset-md-1">
+<!-- <h1>Update Your Contact</h1>
+
+ -->
+ 
+ 
+        <div style="margin-bottom: 20px" class="row ">
+
+                    <div class=" text-center col-md-10 offset-md-1">	
+	<div class="container text-center"><div class="row ">
+	<div class="col-4 ">
+	
+	<img style="height: 150px;width: 150px;border-radius: 50%"  th:src="'/img/'+${contact.imageUrl}" alt="" />
+	</div>
+	<div style="margin: auto; padding:5px " class="col-8 text-center" ><h2>hi ! You can Update <span th:text="${contact.name}"></span> Details </h2></div>
+	
+	</div></div></div>
+                </div>
+ 
+ 
+ 
+ 
+ 								<form action="#" th:object="${contact}"
+									enctype="multipart/form-data" method="post"
+									th:action="@{/user/process-update}" class="mt-2">
+
+									<!-- firstname -->
+									<div class="input-group">
+										<div class="input-group-prepend">
+											<div class="input-group-text ">
+
+												<i class="fa fa-plus"></i>
+
+											</div>
+
+										</div>
+
+										<input th:value="${contact.name}" type="text" id="firstName" name="name"
+											placeholder="enter name here" class="form-control" />
+
+
+									</div>
+									<!-- second name -->
+									<div class="input-group mt-3">
+										<div class="input-group-prepend">
+											<div class="input-group-text ">
+
+												<i class="fas fa-user-alt"></i>
+
+											</div>
+
+										</div>
+
+										<input th:value="${contact.secondName}" type="text" id="secondname" name="secondName"
+											placeholder="nick name here" class="form-control" />
+
+
+									</div>
+
+									<!-- phone -->
+									<div class="input-group mt-3">
+										<div class="input-group-prepend">
+											<div class="input-group-text ">
+
+												<i class="fa fa-phone"></i>
+
+											</div>
+
+										</div>
+
+										<input th:value="${contact.phone}" type="number" id="phone" name="phone"
+											placeholder="phone number here" class="form-control" />
+
+
+									</div>
+
+									<!-- email -->
+									<div class="input-group mt-3">
+										<div class="input-group-prepend">
+											<div class="input-group-text ">
+
+												<i class="fa-solid fa-envelope"></i>
+											</div>
+
+										</div>
+
+										<input th:value="${contact.email}" type="email" id="email" name="email"
+											placeholder="enter email here" class="form-control" />
+
+
+									</div>
+
+									<!-- work field  -->
+									<div class="input-group mt-3">
+										<div class="input-group-prepend">
+											<div class="input-group-text ">
+
+												<i class="fa fa-briefcase"></i>
+											</div>
+
+										</div>
+
+										<input th:value="${contact.work}" type="text" id="work" name="work"
+											placeholder="what is work..." class="form-control" />
+
+
+									</div>
+
+
+									<!-- contact description  -->
+									<div class="input-group mt-3">
+					
+
+										<textarea th:text="${contact.description}" id="mytextarea" name="description" style="width: 100%;"
+											placeholder="enter contact description" class="form-control"
+											rows="7">
+
+</textarea>
+									</div>
+
+<input type="hidden" th:value="${contact.cId}" name="cId"/>
+<input type="hidden" th:value="${contact.imageUrl}" name="imageUrl" />
+									<!-- image -->
+									<div class="input-group mt-3">
+										<div><h5>choose new profile :</h5 ></div>
+
+									</div>
+
+
+									<div class="input-group mt-3 mr-0">
+										<div class="input-group-prepend">
+											<div class="input-group-text ">
+
+												<i class="fa-solid fa-file"></i>
+											</div>
+
+										</div>
+
+										<div class=" container custom-file">
+											<input type="file" name="profileimage">
+
+										</div>
+
+									</div>
+									<!-- submit button -->
+
+									<div class="container text-center">
+
+										<button class="btn btn-outline-primary">Save Contact</button>
+									</div>
+
+
+
+
+
+								</form>
+
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	<script src="https://cdn.tiny.cloud/1/ovkqvvat29ekjiyayif47c78kbmb74v697kpqc9iuoemb75m/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+
+ <script>
+      tinymce.init({
+        selector: '#mytextarea'
+      });
+    </script>
+	
+	</section>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeLeaf.org"
+	th:replace="~{normal/base::Layout(~{::section})}">
+<head>
+<meta charset="UTF-8" />
+<title>This is dash page</title>
+</head>
+<body>
+	<section>
+
+		<div class="card mr-3 ml-3 my-3" style="border-radius: 20px">
+			<div class="card-body">
+
+				<div class="text-center">
+					<div class="container-fluid mt-1">
+						<div class="row">
+							<div class="col-md-12">
+								<h1>Settings</h1>
+								<hr style="border-top: 10px solid #008491;">
+								<div class="container text-left pb-3">
+									<h3>Change password :</h3>
+								</div>
+								<form th:action="@{/user/change-password}" method="post" class="form-inline">
+
+
+									<div class="form-group mx-sm-3 mb-2">
+										<label for="staticEmail2" class="sr-only">Old password</label>
+										<input type="text" name="opass" class="form-control" id="inputPassword1"
+											placeholder="enter old password">
+									</div>
+
+
+									<div class="form-group mx-sm-3 mb-2">
+										<label for="inputPassword2" class="sr-only">New
+											Password</label> <input type="text" name="npass" class="form-control"
+											id="inputPassword2" placeholder="enter new Password">
+									</div>
+
+
+
+									<button type="submit"
+										class="btn btn-outline-primary mx-sm-3 mb-2 rounded-pill font-weight-bold">Change
+										Password</button>
+								</form>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+		<script>
+		
+		$(document).ready(()=>{
+			$('.item').removeClass('active');
+			$('#settings-link').addClass("active");
+		})
+		</script>
+	</section>
+</body>
+</html>
